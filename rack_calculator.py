@@ -47,7 +47,8 @@ def display_results(rack_id, results):
 def main():
     results = {'internal_to_ISP': None, 'quotient': None, 'remainder': None}
     rack_id = get_rack_information()
-
+    
+    print("[+] FOR SITIZENs BY SITIZENs")
     print("[*] Running Raw!")
     print(f"[*] Your rack number is: {rack_id}")
         

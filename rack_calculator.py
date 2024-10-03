@@ -4,6 +4,7 @@ Honestly this is just to make life easier for SIT students taking networking
 If you lazy to calculate the rack IP address just use this script. Life hack fr
 
 Usage: python3 rack_calculator.py <rack_number>
+Example: python3 rack_calculator.py 7B
 """
 
 import argparse
@@ -42,8 +43,6 @@ def display_results(rack_id, results):
     for item, value in data:
         print("| {:<30} | {:<30} |".format(item, value))
     print(divider)
-
-
 
 def main():
     results = {'internal_to_ISP': None, 'quotient': None, 'remainder': None}

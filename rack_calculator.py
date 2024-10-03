@@ -1,10 +1,18 @@
+"""
+Written by SITIZEN for SITIZENs
+Honestly this is just to make life easier for SIT students taking networking
+If you lazy to calculate the rack IP address just use this script. Life hack fr
+
+Usage: python3 rack_calculator.py <rack_number>
+"""
+
 import argparse
 
 wkw_rack_bible = {'A': '1', 'B': '2', 'C': '3', 'D': '4', 'E': '5', 'F': '6'}
 
 def get_rack_information():
-    parser = argparse.ArgumentParser(description='Enter your rack information')
-    parser.add_argument('rack', type=str, help='Enter your rack number. See the networking rack sticker (example: 7B)')
+    parser = argparse.ArgumentParser(description='If you hate calculating ip address or you are like me who cannot count then use this LOL Sibei ez to use. By SITIZEN for SITIZENs')
+    parser.add_argument('rack', type=str, help='Go see the sticker on the rack then just whack inside this argument (example: 7B)')
     args = parser.parse_args()
     return args.rack
 
@@ -38,10 +46,10 @@ def display_results(rack_id, results):
 
 
 def main():
-    print("[*] Running Raw!")
     results = {'internal_to_ISP': None, 'quotient': None, 'remainder': None}
-
     rack_id = get_rack_information()
+
+    print("[*] Running Raw!")
     print(f"[*] Your rack number is: {rack_id}")
         
     # Convert to octal

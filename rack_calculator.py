@@ -23,9 +23,8 @@ def display_results(rack_id, results):
         ("Edge router to ISP network", f"172.17.9.{results['internal_to_ISP']}/30"),
         ("Edge router's IP", f"172.17.9.{int(results['internal_to_ISP']) + 1}/30"),
         ("ISP's IP", f"172.17.9.{int(results['internal_to_ISP']) + 2}/30"),
-        ("Public IP Block", f"203.149.{results['quotient'] + 210}.{results['remainder']}/29"),
-        ("First Usable Public IP", f"203.149.{results['quotient'] + 210}.{results['remainder'] + 1}/29"),
-        ("Last Usable Public IP", f"203.149.{results['quotient'] + 210}.{results['remainder'] + 6}/29")
+        ("Public IP Block", f"203.149.{results['quotient'] + 210}.{results['remainder']}-{results['remainder'] + 7}/29"),
+        ("Usable Public IPs", f"203.149.{results['quotient'] + 210}.{results['remainder'] + 1}-{results['remainder'] + 6}/29")
     ]
 
     # Print the table

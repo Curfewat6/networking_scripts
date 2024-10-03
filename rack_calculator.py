@@ -60,7 +60,7 @@ def main():
     remainder = numerical % 256
     results['quotient'] = quotient
     results['remainder'] = remainder
-
+    print()
     display_results(rack_id, results)
     
 if __name__ == '__main__':
